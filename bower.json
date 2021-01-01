@@ -16,14 +16,14 @@
     "output"
   ],
   "dependencies": {
-    "purescript-prelude": "master",
-    "purescript-record": "master",
-    "purescript-tuples": "master",
-    "purescript-functors": "master",
-    "purescript-variant": "master",
-    "purescript-either": "master"
+    "purescript-prelude": "^4.1.0",
+    "purescript-record": "^2.0.0",
+    "purescript-tuples": "^5.0.0",
+    "purescript-functors": "^3.0.1",
+    "purescript-variant": "^6.0.0",
+    "purescript-either": "^4.0.0"
   },
   "devDependencies": {
-    "purescript-psci-support": "master"
+    "purescript-psci-support": "^4.0.0"
   }
 }
