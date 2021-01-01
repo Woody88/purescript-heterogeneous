@@ -166,7 +166,7 @@ instance hfoldlVariantWithIndex ::
   hfoldlWithIndex =
     foldlVariantRowList (RLProxy :: RLProxy rl)
 
-class FoldlVariant f x (rl :: RowList Type) (r :: Row Type) b | f x rl -> b, rl -> r where
+class FoldlVariant f x rl  r  b | f x rl -> b, rl -> r where
   foldlVariantRowList :: RLProxy rl -> f -> x -> Variant r -> b
 
 instance foldlVariantCons ::
@@ -204,7 +204,7 @@ instance hfoldlVariantFWithIndex ::
   hfoldlWithIndex =
     foldlVariantFRowList (RLProxy :: RLProxy rl)
 
-class FoldlVariantF f x (rl :: RowList Type) (r :: Row Type) z y | f x rl z -> r y where
+class FoldlVariantF f x rl r z y | f x rl z -> r y where
   foldlVariantFRowList :: RLProxy rl -> f -> x -> VariantF r z -> y
 
 instance foldlVariantFCons ::

@@ -2,6 +2,8 @@ module Test.Variant where
 
 import Prelude
 
+import Effect 
+import Effect.Class.Console as Console 
 import Data.Variant (SProxy(..), Variant)
 import Data.Variant as Variant
 import Heterogeneous.Folding (class Folding, class HFoldl, hfoldl)
@@ -32,3 +34,6 @@ showVariantValue =
 test :: String
 test =
   showVariantValue someFoo
+
+main :: Effect Unit 
+main = Console.log test 
